@@ -17,7 +17,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "build": "tsup src/index.ts --format esm,cjs --clean && tsc -p tsconfig.build.json",
     "build:demo": "vite build",
     "check": "npm run typecheck && npm run lint && npm test && npm run build && npm run build:demo",
     "lint": "biome check .",
@@ -40,6 +40,9 @@
   "dependencies": {
     "@lezer/highlight": "^1.2.0"
   },
+  "overrides": {
+    "esbuild": "^0.28.2"
+  },
   "devDependencies": {
     "@biomejs/biome": "^2.5.11",
     "@codemirror/commands": "^6.11.0",
@@ -48,8 +51,8 @@
     "@codemirror/view": "^6.43.9",
     "codemirror": "^6.0.2",
     "tsup": "^8.5.0",
-    "typescript": "^5.9.0",
+    "typescript": "^7.0.2",
     "vite": "^8.2.2",
-    "vitest": "^3.2.4"
+    "vitest": "^4.1.11"
   }
 }
