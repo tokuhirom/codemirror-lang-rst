@@ -31,4 +31,6 @@ only need an `EditorState`.
 ## Development
 
 Run `npm run check` to type-check, lint with Biome, test, and build both the
-package and demo. GitHub Actions references are commit-pinned with pinact.
+package and demo. Run `npm run test:e2e` after installing Playwright's Chromium
+browser to exercise the demo in a real browser. GitHub Actions references are
+commit-pinned with pinact.

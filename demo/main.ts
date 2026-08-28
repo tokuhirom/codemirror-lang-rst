@@ -14,7 +14,7 @@ import "./style.css"
 const documentText = `reStructuredText in CodeMirror 6
 ================================
 
-This live editor highlights **strong text**, *emphasis*, ``inline literals``,
+This live editor highlights **strong text**, *emphasis*, \`\`inline literals\`\`,
 and links such as \`CodeMirror <https://codemirror.net/>\`_.
 
 Features
