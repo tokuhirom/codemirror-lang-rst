@@ -1,6 +1,7 @@
 import { defaultKeymap, history, historyKeymap, indentWithTab } from "@codemirror/commands"
-import { bracketMatching, defaultHighlightStyle, syntaxHighlighting } from "@codemirror/language"
+import { bracketMatching } from "@codemirror/language"
 import { EditorState } from "@codemirror/state"
+import { oneDark } from "@codemirror/theme-one-dark"
 import {
   EditorView,
   highlightActiveLine,
@@ -52,7 +53,7 @@ const state = EditorState.create({
     history(),
     highlightActiveLine(),
     bracketMatching(),
-    syntaxHighlighting(defaultHighlightStyle, { fallback: true }),
+    oneDark,
     keymap.of([indentWithTab, ...defaultKeymap, ...historyKeymap]),
     reStructuredText(),
     EditorView.lineWrapping,

@@ -88,12 +88,6 @@ section {
 }
 .cm-gutters {
   border: 0;
-  background: #fafbf9;
-  color: #9aa4a1;
-}
-.cm-editor .cm-activeLine,
-.cm-editor .cm-activeLineGutter {
-  background: #e9f4f250;
 }
 footer {
   margin-top: 20px;

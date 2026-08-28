@@ -15,6 +15,10 @@ test("loads an interactive reStructuredText editor without browser errors", asyn
   await expect(editor).toBeVisible()
   await expect(editor.locator(".cm-content")).toContainText("reStructuredText in CodeMirror 6")
   await expect(editor.locator(".cm-content span").first()).toBeVisible()
+  const syntaxColors = await editor
+    .locator(".cm-content span")
+    .evaluateAll((spans) => [...new Set(spans.map((span) => getComputedStyle(span).color))])
+  expect(syntaxColors.length).toBeGreaterThanOrEqual(4)
   expect(errors).toEqual([])
 })
 
